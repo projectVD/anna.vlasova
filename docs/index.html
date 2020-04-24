@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Anna Vlasova</title>
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,500,600,700|Roboto:300,400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <!-- Custom cursor -->
+  <div class="cursor"></div>
+
+  <!-- Preloader  -->
+  <div class="load-page"></div>
+
+
+  
+  <!-- Header -->
+  <header class="header">
+    <div class="header__wrapper">
+      <div class="header-logo"><a class="active-link" data-target="portfolio" href="#">Anna Vlasova</a></div>
+      <button class="burger-btn burger-on"><span></span></button>
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__items"><a class="active-link nav-link" id='header-btn-portfolio' data-target="portfolio" href="#">Portfolio</a></li>
+          <li class="menu__items"><a class="active-link nav-link" id='header-btn-about' data-target="about" href="#">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Burger menu -->
+  <div class="burger-menu">
+    <button class="burger-off"><span></span><span></span></button>
+    <ul class="burger-menu__list">
+      <li class="burger-menu__items"><a class="active-link" id='burger-btn-about' data-target="about" href="#">About</a></li>
+      <li class="burger-menu__items"><a class="active-link" id='burger-btn-beauty' data-target="portfolio-beauty" href="#">Beauty</a></li>
+      <li class="burger-menu__items"><a id='burger-btn-portraits' class="active-link" data-target="portfolio-portraits" href="#">Portraits</a></li>
+      <li class="burger-menu__items"><a id='burger-btn-stage' class="active-link" data-target="portfolio-stage" href="#">Stage photo</a></li>
+      <li class="burger-menu__items"><a id='burger-btn-fashion' class="active-link" data-target="portfolio-fashion" href="#">Art fashion</a></li>
+      <li class="burger-menu__items"><a id='burger-btn-media' class="active-link" data-target="portfolio-media" href="#">I'm in the media</a></li>
+    </ul>
+  </div>
+
+  <!-- Main -->
+  <main class="main" id="main">
+    
+    <!-- Portfolio -->
+    <section class="portfolio page active" id="portfolio">
+      <div class="scroll-portfolio">
+        <div class="portfolio__wrapper container">
+          <div class="portfolio__items" id="beauty">
+            <div class="portfolio__img img-attention_on">
+              <img src="img/portfolio/portfolioImg_beauty.jpg" alt="#">
+            </div>
+            <div class="items-title"><a href="#" class="active-link" data-target="portfolio-beauty">Beauty</a></div>
+          </div>
+          <div class="portfolio__items" id="portraits">
+            <div class="portfolio__img img-attention_on">
+              <img src="img/portfolio/portfolioImg_portraits.jpg" alt="#">
+            </div>
+            <div class="items-title"><a href="#" class="active-link" data-target="portfolio-portraits">Portraits</a></div>
+          </div>
+          <div class="portfolio__items" id="stage-photo">
+            <div class="portfolio__img img-attention_on">
+              <img src="img/portfolio/portfolioImg_stagePhoto.jpg" alt="#">
+            </div>
+            <div class="items-title"><a href="#" class="active-link" data-target="portfolio-stage">Stage photograpgy</a></div>
+          </div>
+          <div class="portfolio__items" id="stage-photo">
+            <div class="portfolio__img img-attention_on">
+              <img src="img/portfolio/portfolioImg_artFashion.jpg" alt="#">
+            </div>
+            <div class="items-title"><a href="#" class="active-link" data-target="portfolio-fashion">Art fashion</a></div>
+          </div>
+          <div class="portfolio__items" id="stage-photo">
+            <div class="portfolio__img img-attention_on">
+              <img src="img/portfolio/portfolioImg_media.jpg" alt="#">
+            </div>
+            <div class="items-title"><a href="#" class="active-link" data-target="portfolio-media">I'm in the media</a></div>
+          </div>
+        </div>
+        <div class="portfolio-button">
+          <a href="#" class="active-link" data-target="about" >About</a>
+        </div>
+
+        <footer class="footer"> 
+          <div class="footer__wrapper">
+            <div class="author-name">&copy; Anna Vlasova 2020</div>
+            <div class="author-media">
+              <a class="footer-link email" href="#">Email</a>
+              <a class="footer-link" href="#">Instagram</a>
+              <a class="footer-link vogue" href="#">Vogue</a>
+              <a class="footer-link" href="#">Vk</a>
+            </div>
+            <div class="designer-name">
+              <a class="footer-link link-designer" href="https://www.behance.net/VTORIANYK"><span>Created with love</span> Torianyk</a>
+            </div>
+          </div>
+        </footer>
+
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about page" id="about">
+        <div class="container">
+          <div class="about-img">
+            <img src="img/about/aboutImg_1.jpg" alt="#">
+          </div>
+          <div class="about__wrapper">
+            <div class="about__information"> 
+              <div class="about__media">
+                <a href="#">annyvlasova@yahoo.com</a>
+                <a href="#">Instagram</a>
+                <a href="#">My profile at Vogue</a>
+                <a href="#">Vk</a>
+              </div>
+            </div>
+            <h1 class="title">Anna<span>Vlasova</span></h1>
+            <div class="about__essay">
+              <h2 class="essay-title">
+                Professional photographer.
+                <br>I work in the genres of fashion, portrait, and art photography.
+              </h2>
+              <h2 class="essay-title">Currently based in <span>St. Petersburg</span></span></h2>
+              <div class="essay-text">
+                <p class="text">
+                  I got interested in fashion, painting, and dance when I was a little kid.
+                  And my passion for photography has developed since then.
+                </p>
+                <p class="text">
+                  For as long as I can remember, I'm constantly trying to create something beautiful
+                  and interesting.
+                </p>
+                <p class="text">
+                  I started with painting, then I smoothly moved on to photography, and it took over my life.
+                </p>
+                <p class="text">
+                  I am still looking for inspiration in paintings, architecture, contemporary and classic art.
+                  But what inspires me most is people and everything about them, their individuality, feelings,
+                  complexity, the beauty of their bodies, and everything they create
+                </p>
+                <p class="text">
+                  The human is beautiful, both in static and in motion. This is what I'm trying to capture in my work.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="about__btn">
+            <a data-target="portfolio" class="active-link" href="#">Portfolio</a>
+          </div>
+        </div>
+       
+        <div class="render-footer"></div>
+
+    </section>
+  
+    <!-- Bueauty -->
+    <section class="beauty page" id="portfolio-beauty">
+      <div class="scroll-bueauty">
+        <h1 class="beauty-title">Beauty collection</h1>
+
+        <div class="beauty__wrapper container">
+          <section class="beauty__photo-group group-one">
+            <div class="photo-group__img animate-img">
+              <img src="img/beauty/beautyImg_1.jpg" alt="#">
+            </div>
+
+            <div class="photo-group__img animate-img">
+              <img src="img/beauty/beautyImg_2.jpg" alt="#">
+            </div>
+
+            <div class="photo-group__img animate-img">
+              <img src="img/beauty/beautyImg_3.jpg" alt="#">
+            </div>
+          </section>
+
+          <section class="beauty__photo-group group-two">
+            <div class="photo-wrapper">
+              <div class="photo-group__img animate-img">
+                <img src="img/beauty/beautyImg_4.jpg" alt="#">
+              </div>
+              <div class="photo-group__img animate-img">
+                <img src="img/beauty/beautyImg_5.jpg" alt="#">
+              </div>
+            </div>
+            <div class="photo-group__img animate-img">
+              <img src="img/beauty/beautyImg_6.jpg" alt="#">
+            </div>
+          </section>
+
+          <section class="beauty__photo-group group-three">
+            <div class="photo-group__img animate-img">
+              <img src="img/beauty/beautyImg_7.jpg" alt="#">
+            </div>
+            <div class="photo-wrapper">
+              <div class="wrapers-img animate-img">
+                <img src="img/beauty/beautyImg_8.jpg" alt="#">
+              </div>
+              <div class="wrapers-img animate-img">
+                <img src="img/beauty/beautyImg_9.jpg" alt="#">
+              </div>
+            </div>
+            <div class="photo-group__img animate-img">
+              <img src="img/beauty/beautyImg_10.jpg" alt="#">
+            </div>
+            <div class="photo-group__img animate-img">
+              <img src="img/beauty/beautyImg_11.jpg" alt="#">
+            </div>
+          </section>
+
+          <section class="beauty__photo-group group-four">
+            <div class="photo-wrapper">
+              <div class="wrapers-img animate-img">
+                <img src="img/beauty/beautyImg_12.jpg" alt="#">
+              </div>
+              <div class="wrapers-img animate-img">
+                <img src="img/beauty/beautyImg_13.jpg" alt="#">
+              </div>
+            </div>
+            <div class="photo-group__img animate-img">
+              <img src="img/beauty/beautyImg_14.jpg" alt="#">
+            </div>
+            <div class="photo-group__img animate-img">
+              <img src="img/beauty/beautyImg_15.jpg" alt="#">
+            </div>
+          </section>
+        </div>
+
+        <div class="beauty-button">
+          <div class="beutu-button__img">
+            <img src="img/beauty/beautyImg_16.jpg" alt="#">
+          </div>
+          <div class="beauty-button__link">
+            <p>next</p>
+            <a href="#" class="active-link" data-target="portfolio-portraits">Portraits</a>
+          </div>
+        </div>
+
+        <div class="render-footer"></div>
+
+      </div>
+    </section>
+
+    <!-- Portraits -->
+    <section class="portraits page" id="portfolio-portraits">
+      <div class="scroll-portraits">
+        <h1 class="catalog-title">Portraits</h1>
+        <div class="catalog-wrapper container">
+          <div class="photo-wrapper">
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/portraits/portraitsImg_1.jpg" alt="#">
+            </div>
+          </div>
+          <div class="photo-wrapper">
+            <div class="photo-inline">
+              <div class="photo-inline__img animate-img">
+                <img src="img/portraits/portraitsImg_2.jpg" alt="#">
+              </div>
+              <div class="photo-inline__img animate-img">
+                <img src="img/portraits/portraitsImg_3.jpg" alt="#">
+              </div>
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/portraits/portraitsImg_4.jpg" alt="#">
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/portraits/portraitsImg_5.jpg" alt="#">
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/portraits/portraitsImg_6.jpg" alt="#">
+            </div>
+          </div>
+          <div class="photo-wrapper">
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/portraits/portraitsImg_7.jpg" alt="#">
+            </div>
+            <div class="photo-inline">
+              <div class="photo-inline__img animate-img">
+                <img src="img/portraits/portraitsImg_8.jpg" alt="#">
+              </div>
+              <div class="photo-inline__img animate-img">
+                <img src="img/portraits/portraitsImg_9.jpg" alt="#">
+              </div>
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/portraits/portraitsImg_10.jpg" alt="#">
+            </div>
+          </div>
+          <div class="photo-wrapper"> 
+            <div class="photo-inline">
+              <div class="photo-inline__img animate-img">
+                <img src="img/portraits/portraitsImg_11.jpg" alt="#">
+              </div>
+              <div class="photo-inline__img animate-img">
+                <img src="img/portraits/portraitsImg_12.jpg" alt="#">
+              </div>
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/portraits/portraitsImg_13.jpg" alt="#">
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/portraits/portraitsImg_14.jpg" alt="#">
+            </div>
+          </div>
+          <div class="photo-wrapper">
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/portraits/portraitsImg_15.jpg" alt="#">
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/portraits/portraitsImg_16.jpg" alt="#">
+            </div>
+          </div>
+          <div class="photo-wrapper">
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/portraits/portraitsImg_17.jpg" alt="#">
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/portraits/portraitsImg_18.jpg" alt="#">
+            </div>
+            <div class="photo-inline">
+              <div class="photo-inline__img animate-img">
+                <img src="img/portraits/portraitsImg_19.jpg" alt="#">
+              </div>
+              <div class="photo-inline__img animate-img">
+                <img src="img/portraits/portraitsImg_20.jpg" alt="#">
+              </div>
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/portraits/portraitsImg_21.jpg" alt="#">
+            </div>
+          </div>
+          <div class="photo-wrapper">
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/portraits/portraitsImg_22.jpg" alt="#">
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/portraits/portraitsImg_23.jpg" alt="#">
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/portraits/portraitsImg_24.jpg" alt="#">
+            </div>
+          </div>
+          <div class="photo-wrapper">
+            <div class="photo-inline">
+              <div class="photo-inline__img animate-img">
+                <img src="img/portraits/portraitsImg_25.jpg" alt="#">
+              </div>
+              <div class="photo-inline__img animate-img">
+                <img src="img/portraits/portraitsImg_26.jpg" alt="#">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="catalog-button">
+          <div class="catalog-button__img">
+            <img src="img/portraits/portraitsImg_27.jpg" alt="#">
+          </div>
+          <div class="catalog-button__link">
+            <p>next</p>
+            <a href="#" class="active-link" data-target="portfolio-stage">Stage photograpgy</a>
+          </div>
+        </div>
+
+        <div class="render-footer"></div>
+
+      </div>
+    </section>
+    
+    <!-- Stage -->
+    <section class="stage page" id="portfolio-stage">
+      <div class="scroll-stage">
+        <h1 class="catalog-title">Stage photograpgy</h1>
+        <div class="catalog-wrapper container">
+          <div class="photo-wrapper">
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/stage/stageImg_1.jpg" alt="#">
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/stage/stageImg_2.jpg" alt="#">
+            </div>
+          </div>
+          <div class="photo-wrapper">
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/stage/stageImg_3.jpg" alt="#">
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/stage/stageImg_4.jpg" alt="#">
+            </div>
+          </div>
+          <div class="photo-wrapper">
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/stage/stageImg_5.jpg" alt="#">
+            </div>
+          </div>
+          <div class="photo-wrapper">
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/stage/stageImg_6.jpg" alt="#">
+            </div>
+            <div class="photo-inline">
+              <div class="photo-inline__img animate-img">
+                <img src="img/stage/stageImg_7.jpg" alt="#">
+              </div>
+              <div class="photo-inline__img animate-img">
+                <img src="img/stage/stageImg_8.jpg" alt="#">
+              </div>
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/stage/stageImg_9.jpg" alt="#">
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/stage/stageImg_10.jpg" alt="#">
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/stage/stageImg_11.jpg" alt="#">
+            </div>
+            <div class="second-inline">
+              <div class="second-inline__img animate-img">
+                <img src="img/stage/stageImg_12.jpg" alt="#">
+              </div>
+              <div class="second-inline__img animate-img">
+                <img src="img/stage/stageImg_13.jpg" alt="#">
+              </div>
+            </div>
+          </div>
+          <div class="photo-wrapper">
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/stage/stageImg_14.jpg" alt="#">
+            </div>
+            <div class="photo-inline">
+              <div class="photo-inline__img animate-img">
+                <img src="img/stage/stageImg_15.jpg" alt="#">
+              </div>
+              <div class="photo-inline__img animate-img">
+                <img src="img/stage/stageImg_16.jpg" alt="#">
+              </div>
+            </div>
+          </div>
+          <div class="photo-wrapper">
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/stage/stageImg_17.jpg" alt="#">
+            </div>
+            <div class="photo-inline">
+              <div class="photo-inline__img animate-img">
+                <img src="img/stage/stageImg_18.jpg" alt="#">
+              </div>
+              <div class="photo-inline__img animate-img">
+                <img src="img/stage/stageImg_19.jpg" alt="#">
+              </div>
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/stage/stageImg_20.jpg" alt="#">
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/stage/stageImg_21.jpg" alt="#">
+            </div>
+          </div>
+          <div class="photo-wrapper">
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/stage/stageImg_22.jpg" alt="#">
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/stage/stageImg_23.jpg" alt="#">
+            </div>
+            <div class="photo-inline">
+              <div class="photo-inline__img animate-img">
+                <img src="img/stage/stageImg_24.jpg" alt="#">
+              </div>
+              <div class="photo-inline__img animate-img">
+                <img src="img/stage/stageImg_25.jpg" alt="#">
+              </div>
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/stage/stageImg_26.jpg" alt="#">
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/stage/stageImg_27.jpg" alt="#">
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/stage/stageImg_28.jpg" alt="#">
+            </div>
+            <div class="second-inline">
+              <div class="second-inline__img animate-img">
+                <img src="img/stage/stageImg_29.jpg" alt="#">
+              </div>
+              <div class="second-inline__img animate-img">
+                <img src="img/stage/stageImg_30.jpg" alt="#">
+              </div>
+            </div>
+            <div class="third-inline">
+              <div class="third-inline__img animate-img">
+                <img src="img/stage/stageImg_31.jpg" alt="#">
+              </div>
+              <div class="third-inline__img animate-img">
+                <img src="img/stage/stageImg_32.jpg" alt="#">
+              </div>
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/stage/stageImg_33.jpg" alt="#">
+            </div>
+            <div class="fourth-inline">
+              <div class="fourth-inline__img animate-img">
+                <img src="img/stage/stageImg_34.jpg" alt="#">
+              </div>
+              <div class="fourth-inline__img animate-img">
+                <img src="img/stage/stageImg_35.jpg" alt="#">
+              </div>
+            </div>
+            <div class="fifth-inline">
+              <div class="fifth-inline__img animate-img">
+                <img src="img/stage/stageImg_36.jpg" alt="#">
+              </div>
+              <div class="fifth-inline__img animate-img">
+                <img src="img/stage/stageImg_37.jpg" alt="#">
+              </div>
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/stage/stageImg_38.jpg" alt="#">
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/stage/stageImg_39.jpg" alt="#">
+            </div>
+          </div>
+        </div>
+        <div class="catalog-button">
+          <div class="catalog-button__img">
+            <img src="img/stage/stageImg_40.jpg" alt="#">
+          </div>
+          <div class="catalog-button__link">
+            <p>next</p>
+            <a href="#" class="active-link" data-target="portfolio-fashion">Art fashion</a>
+          </div>
+        </div>
+        
+        <div class="render-footer"></div>
+
+      </div>
+    </section>
+    
+    <!-- Fashion -->
+    <section class="fashion page" id="portfolio-fashion">
+      <div class="scroll-fashion">
+        <h1 class="catalog-title">Art fashion</h1>
+        <div class="catalog-wrapper container">
+          <div class="photo-wrapper">
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/fashion/fashionImg_1.jpg" alt="#">
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/fashion/fashionImg_2.jpg" alt="#">
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/fashion/fashionImg_3.jpg" alt="#">
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/fashion/fashionImg_4.jpg" alt="#">
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/fashion/fashionImg_5.jpg" alt="#">
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/fashion/fashionImg_6.jpg" alt="#">
+            </div>
+            <div class="photo-inline">
+              <div class="photo-inline__img animate-img">
+                <img src="img/fashion/fashionImg_7.jpg" alt="#">
+              </div>
+              <div class="photo-inline__img animate-img">
+                <img src="img/fashion/fashionImg_8.jpg" alt="#">
+              </div>
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/fashion/fashionImg_9.jpg" alt="#">
+            </div>
+          </div>
+          <div class="photo-wrapper">
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/fashion/fashionImg_10.jpg" alt="#">
+            </div>
+            <div class="photo-inline">
+              <div class="photo-inline__img animate-img">
+                <img src="img/fashion/fashionImg_11.jpg" alt="#">
+              </div>
+              <div class="photo-inline__img animate-img">
+                <img src="img/fashion/fashionImg_12.jpg" alt="#">
+              </div>
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/fashion/fashionImg_13.jpg" alt="#">
+            </div>
+            <div class="second-inline">
+              <div class="second-inline__img animate-img">
+                <img src="img/fashion/fashionImg_14.jpg" alt="#">
+              </div>
+              <div class="second-inline__img animate-img">
+                <img src="img/fashion/fashionImg_15.jpg" alt="#">
+              </div>
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/fashion/fashionImg_16.jpg" alt="#">
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/fashion/fashionImg_17.jpg" alt="#">
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/fashion/fashionImg_18.jpg" alt="#">
+            </div>
+          </div>
+          <div class="photo-wrapper">
+            <div class="photo-inline">
+              <div class="photo-inline__img animate-img">
+                <img src="img/fashion/fashionImg_19.jpg" alt="#">
+              </div>
+              <div class="photo-inline__img animate-img">
+                <img src="img/fashion/fashionImg_20.jpg" alt="#">
+              </div>
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/fashion/fashionImg_21.jpg" alt="#">
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/fashion/fashionImg_22.jpg" alt="#">
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/fashion/fashionImg_23.jpg" alt="#">
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/fashion/fashionImg_24.jpg" alt="#">
+            </div>
+          </div>
+          <div class="photo-wrapper">
+            <div class="photo-inline">
+              <div class="photo-inline__img animate-img">
+                <img src="img/fashion/fashionImg_25.jpg" alt="#">
+              </div>
+              <div class="photo-inline__img animate-img">
+                <img src="img/fashion/fashionImg_26.jpg" alt="#">
+              </div>
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/fashion/fashionImg_27.jpg" alt="#">
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/fashion/fashionImg_28.jpg" alt="#">
+            </div>
+            <div class="second-inline">
+              <div class="second-inline__img animate-img">
+                <img src="img/fashion/fashionImg_29.jpg" alt="#">
+              </div>
+              <div class="second-inline__img animate-img">
+                <img src="img/fashion/fashionImg_30.jpg" alt="#">
+              </div>
+            </div>
+          </div>
+          <div class="photo-wrapper">
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/fashion/fashionImg_31.jpg" alt="#">
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/fashion/fashionImg_32.jpg" alt="#">
+            </div>
+          </div>
+          <div class="photo-wrapper">
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/fashion/fashionImg_33.jpg" alt="#">
+            </div>
+          </div>
+        </div>
+        <div class="catalog-button">
+          <div class="catalog-button__img">
+            <img src="img/fashion/fashionImg_34.jpg" alt="#">
+          </div>
+          <div class="catalog-button__link">
+            <p>next</p>
+            <a href="#" class="active-link" data-target="portfolio-media">I'm in the media</a>
+          </div>
+        </div>
+    
+        <div class="render-footer"></div>
+
+      </div>
+    </section>
+
+    <!-- Media -->
+    <section class="media page" id="portfolio-media">
+      <div class="scroll-media">
+        <h1 class="catalog-title">I'm in the media</h1>
+        <div class="catalog-wrapper container">
+          <div class="photo-wrapper">
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/media/mediaImg_1.jpg" alt="#">
+            </div>
+            <div class="photo-inline">
+              <div class="photo-inline__img animate-img">
+                <img src="img/media/mediaImg_2.jpg" alt="#">
+              </div>
+              <div class="photo-inline__img animate-img">
+                <img src="img/media/mediaImg_3.jpg" alt="#">
+              </div>
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/media/mediaImg_4.jpg" alt="#">
+            </div>
+          </div>
+          <div class="photo-wrapper">
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/media/mediaImg_5.jpg" alt="#">
+            </div>
+          </div>
+          <div class="photo-wrapper">
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/media/mediaImg_6.jpg" alt="#">
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/media/mediaImg_7.jpg" alt="#">
+            </div>
+            <div class="photo-inline">
+              <div class="photo-inline__img animate-img">
+                <img src="img/media/mediaImg_8.jpg" alt="#">
+              </div>
+              <div class="photo-inline__img animate-img">
+                <img src="img/media/mediaImg_9.jpg" alt="#">
+              </div>
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/media/mediaImg_10.jpg" alt="#">
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/media/mediaImg_11.jpg" alt="#">
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/media/mediaImg_12.jpg" alt="#">
+            </div>
+          </div>
+          <div class="photo-wrapper">
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/media/mediaImg_13.jpg" alt="#">
+            </div>
+          </div>
+          <div class="photo-wrapper">
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/media/mediaImg_14.jpg" alt="#">
+            </div>
+          </div>
+          <div class="photo-wrapper">
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/media/mediaImg_15.jpg" alt="#">
+            </div>
+          </div>
+          <div class="photo-wrapper">
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/media/mediaImg_16.jpg" alt="#">
+            </div>
+          </div>
+          <div class="photo-wrapper">
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/media/mediaImg_17.jpg" alt="#">
+            </div>
+          </div>
+          <div class="photo-wrapper">
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/media/mediaImg_18.jpg" alt="#">
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/media/mediaImg_19.jpg" alt="#">
+            </div>
+          </div>
+          <div class="photo-wrapper">
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/media/mediaImg_20.jpg" alt="#">
+            </div>
+            <div class="photo-inline">
+              <div class="photo-inline__img animate-img">
+                <img src="img/media/mediaImg_21.jpg" alt="#">
+              </div>
+              <div class="photo-inline__img animate-img">
+                <img src="img/media/mediaImg_22.jpg" alt="#">
+              </div>
+            </div>
+            <div class="photo-wrapper__img animate-img">
+              <img src="img/media/mediaImg_23.jpg" alt="#">
+            </div>
+          </div>
+        </div>
+        <div class="catalog-button">
+          <div class="catalog-button__img">
+            <img src="img/media/mediaImg_24.jpg" alt="#">
+          </div>
+          <div class="catalog-button__link">
+            <p>next</p>
+            <a href="#" class="active-link" data-target="portfolio-beauty">Beauty</a>
+          </div>
+        </div>
+
+        <div class="render-footer"></div>
+
+      </div>
+    </section>  
+
+
+  </main>
+
+  <!-- Footer -->
+  <!-- <footer class="footer"> 
+    <div class="footer__wrapper">
+      <div class="author-name">&copy; Anna Vlasova 2020</div>
+      <div class="author-media">
+        <a class="footer-link" href="#">Email</a>
+        <a class="footer-link" href="#">Instagram</a>
+        <a class="footer-link" href="#">Vogue</a>
+        <a class="footer-link" href="#">Vk</a>
+      </div>
+      <div class="designer-name">
+        <a class="footer-link link-designer" href="https://www.behance.net/VTORIANYK"><span>Created with love</span> Torianyk</a>
+      </div>
+    </div>
+  </footer> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/smooth-scrollbar.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
