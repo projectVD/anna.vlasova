@@ -1,0 +1,19 @@
+@mixin title {
+  font-family: $playfair-r;
+  font-size: $title-size;
+  line-height: $title-height;
+  letter-spacing: 0.01em;
+}
+
+@mixin subtitle {
+  font-family: $playfair-r;
+  font-size: $title-size;
+  line-height: $title-height;
+  letter-spacing: 0.01em;
+}
+
+@mixin flex-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

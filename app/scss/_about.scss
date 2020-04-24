@@ -1,0 +1,109 @@
+.about-img {
+  max-width: 630px;
+  max-height: 839px;
+  width: 40vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+  }
+}
+
+.about {
+  padding-top: 107px;
+  background-color: $white;
+  color: $text-black;
+  &__wrapper {
+    width: 630px;
+    margin-left: auto;
+  }
+  &__media {
+    font-style: italic;
+    font-size: 32px;
+    a {
+      color: $text-black;
+      display: block;
+      border-bottom: 1px solid $text-black;
+      padding: 4px 0;
+    }
+  }
+  .title {
+    margin: 0;
+    padding: 88px 0 46px 0;
+    font-weight: 400;
+    font-size: $title-size;
+    line-height: 88px;
+    letter-spacing: 0.01em;
+    span {
+      display: block;
+      padding-left: 100px;
+    }
+  }
+}
+
+.about__essay {
+  width: 530px;
+  margin-left: auto;
+}
+
+.essay-title {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 44px;
+  span {
+    font-style: italic;
+  }
+  &:last-child {
+    padding-top: 14px;
+  }
+}
+
+.essay-text {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: $global-size;
+  line-height: 24px;
+  max-height: 360px;
+  margin-top: 38px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  .text {
+    padding-top: 24px;
+    max-width: 235px;
+    &:first-child {
+      padding-top: 0;
+    }
+    &:nth-child(2) {
+      width: 200px;
+    }
+    &:nth-child(3) {
+      width: 200px;
+    }
+    &:nth-child(4) {
+      width: 224px;
+      padding-top: 0;
+    }
+    &:last-child {
+      width: 204px;
+    }
+  }
+}
+
+.about__btn {
+  padding-top: 224px;
+  padding-bottom: 169px;
+  text-align: center;
+  a {
+    color: $text-black;
+    font-size: $title-size;
+    border-bottom: 2px solid $text-black;
+  }
+}
+
+
+

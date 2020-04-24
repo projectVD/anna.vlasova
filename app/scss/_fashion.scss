@@ -1,0 +1,194 @@
+.fashion {
+  .photo-wrapper:first-child {
+    padding-top: 0;
+    .photo-wrapper__img:first-child {
+      width: 920px;
+      height: 612px;
+      margin: 0 auto;
+    }
+    .photo-wrapper__img:nth-child(2) {
+      width: 620px;
+      height: 412px;
+      margin-left: auto;
+    }
+    .photo-wrapper__img:nth-child(3) {
+      width: 1000px;
+      height: 666px;
+    }
+    .photo-wrapper__img:nth-child(4) {
+      width: 800px;
+      height: 534px;
+      margin-left: auto;
+    }
+    .photo-wrapper__img:nth-child(5) {
+      width: 686px;
+      height: 486px;
+      margin-left: 314px;
+    }
+    .photo-wrapper__img:nth-child(6) {
+      width: 840px;
+      height: 766px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .photo-wrapper__img:nth-child(8) {
+      width: 730px;
+      height: 486px;
+      margin-left: auto;
+    }
+    .photo-inline {
+      &__img:first-child {
+        width: 520px;
+        height: 435px;
+        margin-top: 20px;  
+      }
+      &__img:last-child {
+        width: 575px;
+        height: 841px;
+      } 
+    }
+  }
+  .photo-wrapper:nth-child(2) {
+    .photo-wrapper__img:first-child {
+      width: 1040px;
+      height: 693px;
+      margin-top: 0;
+    }
+    .photo-wrapper__img:nth-child(3) {
+      width: 580px;
+      height: 869px;
+    }
+    .photo-wrapper__img:nth-child(5) {
+      width: 540px;
+      height: 431px;
+      margin-left: 460px;
+    }
+    .photo-wrapper__img:nth-child(6) {
+      width: 560px;
+      height: 839px;
+      margin-left: 20px;
+    }
+    .photo-wrapper__img:nth-child(7) {
+      width: 570px;
+      height: 466px;
+      margin-left: 430px;
+    }
+    .photo-inline {
+      justify-content: flex-start;
+      &__img:first-child {
+        width: 610px;
+        height: 406px;
+        margin-top: 20px;
+      }
+      &__img:last-child {
+        width: 350px;
+        height: 508px;
+        margin-left: 40px;
+      } 
+    }
+    .second-inline {
+      &__img:first-child {
+        width: 340px;
+        height: 509px;
+        margin-left: 160px;
+      }
+      &__img:last-child {
+        width: 520px;
+        height: 779px;
+      } 
+    }
+  }
+  .photo-wrapper:nth-child(3) {
+    .photo-wrapper__img:nth-child(2) {
+      width: 580px;
+      height: 409px;
+      margin-left: auto;
+    }
+    .photo-wrapper__img:nth-child(3) {
+      width: 770px;
+      height: 568px;
+      margin-left: 230px;
+    }
+    .photo-wrapper__img:nth-child(4) {
+      width: 610px;
+      height: 435px;
+      margin-left: 160px;
+    }
+    .photo-wrapper__img:nth-child(5) {
+      width: 700px;
+      height: 484px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .photo-inline {
+      margin-top: 0;
+      &__img:first-child {
+        width: 480px;
+        height: 731px;
+      }
+      &__img:last-child {
+        width: 320px;
+        height: 479px;
+        margin-top: 231px;
+      } 
+    }
+  }
+  .photo-wrapper:nth-child(4) {
+    .photo-wrapper__img:nth-child(2) {
+      width: 670px;
+      height: 1011px;
+    }
+    .photo-wrapper__img:nth-child(3) {
+      width: 670px;
+      height: 446px;
+      margin-left: auto;
+    }
+    .photo-inline {
+      margin-top: 0;
+      justify-content: flex-start;
+      &__img:first-child {
+        width: 440px;
+        height: 653px;
+      }
+      &__img:last-child {
+        width: 390px;
+        height: 258px;
+        margin-top: 20px;
+        margin-left: 170px;
+      } 
+    }
+    .second-inline {
+      &__img:first-child {
+        width: 300px;
+        height: 485px;
+      }
+      &__img:last-child {
+        width: 680px;
+        height: 453px;
+        margin-top: 20px;
+      } 
+    }
+  }
+  .photo-wrapper:nth-child(5) {
+    .photo-wrapper__img:first-child {
+      width: 540px;
+      height: 809px;
+      margin-top: 0;
+    }
+    .photo-wrapper__img:nth-child(2) {
+      width: 500px;
+      height: 744px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .photo-wrapper:nth-child(6) {
+    .photo-wrapper__img:first-child {
+      width: 390px;
+      height: 584px;
+      margin-top: 0;
+      margin-left: auto;
+    }
+  }
+
+}
