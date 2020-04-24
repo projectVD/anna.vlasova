@@ -65,23 +65,24 @@
   height: 100vh;
   background-color: $white;
   z-index: 5000;
-  transform: translateX(-100%);
+  transform: translateY(-100%);
   transition: all 0.5s ease-in-out;
   &__list {
-    padding-top: 50px;
-    width: 75%;
-    margin: 0 auto;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   &__items {
-    padding-top: 38px;
-    font-size: 32px;
+    padding: 14px 0;
+    font-weight: 500;
+    font-size: 24px;
     line-height: 24px;
     text-align: center;
     letter-spacing: 0.02em;
+    text-transform: uppercase;
     a {
-      width: 100%;
-      display: block;
-      padding-bottom: 8px;
       color: $black;
       border-bottom: 1px solid $black;
     }
@@ -90,20 +91,19 @@
 
 .burger-btn {
   display: block;
-  width: 30px;
-  height: 7px;
+  width: 50px;
+  height: 24px;
   background-color: transparent;
-  border: none;
   outline: none;
+  border: none;
   position: relative;
   span {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    top: 9px;
+    left: 19px;
+    width: 30px;
     height: 1px;
     background-color: $white;
-    outline: none;
     transition: width 0.2s;
     &::before {
       content: '';
@@ -119,34 +119,28 @@
 }
 
 .burger-off {
-  width: 30px;
-  height: 30px;
   position: absolute;
-  top: 20px;
-  right: 20px;
-  border: none;
-  outline: none;
+  top: 22px;
+  right: 16px;
+  width: 55px;
+  height: 55px;
   background-color: transparent;
+  outline: none;
+  border: none;
   span {
     position: absolute;
-    top: 50%;
-    left: 0;
-    width: 30px;
-    height: 1px;
-    background-color: $black;
-    transform: rotate(40deg);
-    transition: transform 0.3s;
-    &::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 0;
-      width: 30px;
-      height: 1px;
-      background-color: $black;
-      transform: rotate(280deg);
-      transition: transform 0.3s;
-    }
+    top: 0;
+    right: 0;
+    width: 16px;
+    height: 2px;
+    background-color: $text-black;
+    transition: transform 0.3s ease-in-out;
+  }
+  span:first-child {
+    transform: translateY(6px) rotate(45deg);
+  }
+  span:last-child {
+    transform: translateY(6px) rotate(-45deg);
   }
 }
 
@@ -162,13 +156,11 @@
 }
 
 .burger-off:hover {
-  span {
-    transform: rotate(0);
-    transition: transform 0.3s;
+  span:first-child {
+    transform: translateY(6px) rotate(0);
   }
-  span::before {
-    transform: rotate(0);
-    transition: transform 0.3s;
+  span:last-child {
+    transform: translateY(6px) rotate(0);
   }
 }
 
@@ -242,7 +234,7 @@
   }
 
   .about {
-    padding-bottom: 36px;
+    padding-bottom: 0;
     &__wrapper {
       width: 100%;
       margin-top: 100%;
@@ -292,9 +284,33 @@
 
   .about__btn {
     padding-top: 54px;
+    padding-bottom: 33px;
     a {
       font-size: 32px;
       border-bottom: 1px solid $text-black;
+    }
+  }
+
+  .about {
+    .footer {
+      background-color: $footer-black;
+      .author-name {
+        color: $white;
+      }
+      .author-media {
+        a {
+          color: $white;
+          border-bottom: 1px solid $white;
+        }
+      }
+      .designer-name {
+        a {
+          color: $white;
+        }
+        span {
+          color: rgba($color: $white, $alpha: 0.6);
+        }
+      }
     }
   }
 

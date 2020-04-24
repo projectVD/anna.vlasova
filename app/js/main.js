@@ -28,13 +28,15 @@ const app = {
     setTimeout(activePage, 2500);
     setTimeout(goTop, 2500);
     setTimeout(loadPageHide, 5000);
-    
+
     function activePage() {
       let currentPage = e.target.getAttribute('data-target');
       document.querySelector('.active').classList.remove('active');
       document.getElementById(currentPage).classList.add('active');
       history.pushState({}, currentPage, `#${currentPage}`);
       document.getElementById(currentPage).dispatchEvent(app.show);
+      footerRender();
+      changeFooterLoinks();
     }
     
     function loadPageShow() {
@@ -51,6 +53,8 @@ const app = {
         behavior: 'instant'
       })
     }
+
+    
   },
   pageShown: function(e) {
     let headerLink = document.querySelectorAll('.nav-link');
@@ -82,6 +86,29 @@ const app = {
 
 document.addEventListener('DOMContentLoaded', app.init);
 
+// Render footer
+
+const footerBlocks = document.querySelectorAll('.render-footer');
+
+function footerRender() {
+  footerBlocks.forEach(footer => {
+    footer.innerHTML = `
+    <footer class="footer"> 
+      <div class="footer__wrapper">
+        <div class="author-name">&copy; Anna Vlasova 2020</div>
+        <div class="author-media">
+          <a class="footer-link email" href="#">Email</a>
+          <a class="footer-link" href="#">Instagram</a>
+          <a class="footer-link vogue" href="#">Vogue</a>
+          <a class="footer-link" href="#">Vk</a>
+        </div>
+        <div class="designer-name">
+          <a class="footer-link link-designer" href="https://www.behance.net/VTORIANYK"><span>Created with love</span> Torianyk</a>
+        </div>
+      </div>
+    </footer>`;
+  });
+}
 
 
 // Cursor setting
@@ -213,14 +240,15 @@ function showBurgerMenu() {
 }
 
 function hideBurgerMenu() {
-  burgerMenu.style.transform = 'translateX(-100%)'
+  burgerMenu.style.transform = 'translateY(-100%)'
 }
 
 // Adaptive 
+
+changeFooterLoinks();
+
 if (window.innerWidth <= 480) {
   const attention =  document.querySelectorAll('.img-attention_on');
-  const footerLinks = document.querySelectorAll('.footer-link');
-
 
   photoGroup.forEach(photo => {
     photo.classList.remove('animate-img')
@@ -230,6 +258,20 @@ if (window.innerWidth <= 480) {
     anim.classList.remove('img-attention_on');
   });
 
-  footerLinks[0].innerHTML = 'annyvlasova@yahoo.com';
-  footerLinks[2].innerHTML = 'My profile at Vogue';
+}
+
+function changeFooterLoinks() {
+  if (window.innerWidth <= 480) {
+    const footerLinkEmail = document.querySelectorAll('.email');
+    const footerLinkVogue = document.querySelectorAll('.vogue');
+    
+    
+    footerLinkEmail.forEach(email => {
+      email.innerHTML = 'annyvlasova@yahoo.com';
+    });
+  
+    footerLinkVogue.forEach(vogue => {
+      vogue.innerHTML = 'My profile at Vogue';
+    });
+  }
 }

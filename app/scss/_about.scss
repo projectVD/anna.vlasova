@@ -105,5 +105,28 @@
   }
 }
 
+.about {
+  .footer {
+    background-color: $footer-white;
+    .author-name {
+      color: $text-black;
+    }
+    .author-media {
+      a {
+        color: $text-black;
+        border-bottom: 1px solid $text-black;
+      }
+    }
+    .designer-name {
+      a {
+        color: $text-black;
+      }
+      span {
+        color: rgba($color: $text-black, $alpha: 0.6);
+      }
+    }
+  }
+}
+
 
 
