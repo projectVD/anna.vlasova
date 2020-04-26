@@ -1,4 +1,5 @@
 // App setings
+const allImgContainer = document.querySelectorAll('.animate-img');
 
 const app = {
   pages: [],
@@ -23,12 +24,24 @@ const app = {
     const mainScreen = document.querySelector('#main');
 
 
+    
+
     hideBurgerMenu();
     loadPageShow();
+    setTimeout(resizeImgHandlerOff, 2500);
     setTimeout(activePage, 2500);
     setTimeout(goTop, 2500);
     setTimeout(loadPageHide, 5000);
 
+    function resizeImgHandlerOff() {
+      if(window.innerWidth <= 850 || window.innerWidth > 1250) 
+        return;
+      allImgContainer.forEach(img => {
+        img.style.width = 'auto'
+        img.style.height = 'auto'   
+      });
+    }
+   
     function activePage() {
       let currentPage = e.target.getAttribute('data-target');
       document.querySelector('.active').classList.remove('active');
@@ -36,7 +49,7 @@ const app = {
       history.pushState({}, currentPage, `#${currentPage}`);
       document.getElementById(currentPage).dispatchEvent(app.show);
       footerRender();
-      changeFooterLoinks();
+      changeFooterLinks();
     }
     
     function loadPageShow() {
@@ -53,25 +66,59 @@ const app = {
         behavior: 'instant'
       })
     }
-
-    
   },
   pageShown: function(e) {
     let headerLink = document.querySelectorAll('.nav-link');
     let headerItems = document.querySelectorAll('.menu__items');
     let aboutPage = document.querySelector('.about');
+    let burgerBtn = document.querySelectorAll('.burger-btn span');
     
     if (aboutPage.classList[2] == 'active') {
+      if (window.innerWidth >= 850) {
+        burgerBtn.forEach(btn => {
+          btn.style.backgroundColor = '#2B2B2B';
+        });
+      }
       headerLink.forEach(link => {
         link.style.color = '#2B2B2B'
       });
+
       headerItems[1].style.borderBottom = '1px solid #2B2B2B'
     } else {
+      burgerBtn.forEach(btn => {
+        btn.style.backgroundColor = '#FCF9F5';
+      });
+
       headerLink.forEach(link => {
         link.style.color = '#FCF9F5'
       });
+
       headerItems[1].style.borderBottom = '1px solid transparent'
       headerItems[0].style.borderBottom = '1px solid #FCF9F5'
+    }
+
+    
+    if (window.innerWidth <= 1250) {
+      if(window.innerWidth <= 850) 
+        return;
+        let sizeScreen = window.innerWidth;
+        let widthCoeff = sizeScreen / 1250;
+        let firstImg = document.querySelectorAll('.first-img')
+        
+        allImgContainer.forEach(img => {
+          let imgWidth = img.clientWidth;
+          let imgHeight= img.clientHeight;
+    
+          let coefW = widthCoeff * imgWidth;
+          let coefH = widthCoeff * imgHeight;
+
+          img.style.width = coefW +'px'
+          img.style.height = coefH +'px'
+        });
+
+        firstImg.forEach(img => {
+          img.style.width = '100%'
+        });
     }
 
   },
@@ -245,10 +292,14 @@ function hideBurgerMenu() {
 
 // Adaptive 
 
-changeFooterLoinks();
+// if (window.innerWidth <= 1250) {
+//   resizeImgHandler();
+// }
 
 if (window.innerWidth <= 480) {
   const attention =  document.querySelectorAll('.img-attention_on');
+
+  changeFooterLinks();
 
   photoGroup.forEach(photo => {
     photo.classList.remove('animate-img')
@@ -260,18 +311,38 @@ if (window.innerWidth <= 480) {
 
 }
 
-function changeFooterLoinks() {
-  if (window.innerWidth <= 480) {
-    const footerLinkEmail = document.querySelectorAll('.email');
-    const footerLinkVogue = document.querySelectorAll('.vogue');
-    
-    
-    footerLinkEmail.forEach(email => {
-      email.innerHTML = 'annyvlasova@yahoo.com';
-    });
+
+// function resizeImgHandler() {
+//   if (window.innerWidth <= 1250) {
+//     if(window.innerWidth <= 480) 
+//       return;
+//     let sizeScreen = window.innerWidth;
+//     let widthCoeff = sizeScreen / 1250;
+
+//     allImgContainer.forEach(img => {
+//       let imgWidth = img.clientWidth;
+//       let imgHeight= img.clientHeight;
+
+//       let coefW = widthCoeff * imgWidth;
+//       let coefH = widthCoeff * imgHeight;
+
+
+//       img.style.width = coefW +'px'
+//       img.style.height = coefH +'px'
+      
+//     });
+//   }
+// }
+
+function changeFooterLinks() {
+  const footerLinkEmail = document.querySelectorAll('.email');
+  const footerLinkVogue = document.querySelectorAll('.vogue');
+      
+  footerLinkEmail.forEach(email => {
+    email.innerHTML = 'annyvlasova@yahoo.com';
+  });
   
-    footerLinkVogue.forEach(vogue => {
-      vogue.innerHTML = 'My profile at Vogue';
-    });
-  }
+  footerLinkVogue.forEach(vogue => {
+    vogue.innerHTML = 'My profile at Vogue';
+  });
 }
