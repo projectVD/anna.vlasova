@@ -144,10 +144,10 @@ function footerRender() {
       <div class="footer__wrapper">
         <div class="author-name">&copy; Anna Vlasova 2020</div>
         <div class="author-media">
-          <a class="footer-link email" href="#">Email</a>
-          <a class="footer-link" href="#">Instagram</a>
-          <a class="footer-link vogue" href="#">Vogue</a>
-          <a class="footer-link" href="#">Vk</a>
+          <a class="footer-link email" href="mailto:annyvlasova@yahoo.com">Email</a>
+          <a class="footer-link" href="https://www.instagram.com/anchellavlasova">Instagram</a>
+          <a class="footer-link vogue" href="https://www.vogue.it/photovogue/portfolio/?id=196784&refresh_ce=https:%2F%2F">Vogue</a>
+          <a class="footer-link" href="https://vk.com/id180984">Vk</a>
         </div>
         <div class="designer-name">
           <a class="footer-link link-designer" href="https://www.behance.net/VTORIANYK"><span>Created with love</span> Torianyk</a>
@@ -201,6 +201,11 @@ pageImg.forEach(img => {
 
 // smoot scroll
 
+
+Scrollbar.init(document.querySelector('.burger-menu__list'), {
+  damping: 0.025,
+});
+
 Scrollbar.init(document.querySelector('.scroll-portfolio'), {
   damping: 0.05,
 });
@@ -231,7 +236,7 @@ Scrollbar.init(document.querySelector('.scroll-bueauty'), {
 
 
 
-// Portfoli card animations
+// Portfolio card animations
 const portfolioItems = document.querySelectorAll('.portfolio__items');
 
 portfolioItems.forEach(items => {
@@ -250,11 +255,16 @@ portfolioItems.forEach(items => {
 
 const photoGroup = document.querySelectorAll('.animate-img');
 
-photoGroup.forEach(card => {
+transformImagesHeandler();
+
+function transformImagesHeandler() {
+  if (window.innerWidth <= 1024)
+    return;
+  photoGroup.forEach(card => {
   card.addEventListener('mousemove', sartRotateCard);
   card.addEventListener('mouseout', stopRotateCard);
-})
-
+  });
+}
 
 function sartRotateCard() {
   const cardItem = this.querySelector('img');
@@ -296,8 +306,9 @@ function hideBurgerMenu() {
 //   resizeImgHandler();
 // }
 
-if (window.innerWidth <= 480) {
+if (window.innerWidth <= 1024) {
   const attention =  document.querySelectorAll('.img-attention_on');
+
 
   changeFooterLinks();
 
@@ -335,6 +346,8 @@ if (window.innerWidth <= 480) {
 // }
 
 function changeFooterLinks() {
+  if (window.innerWidth >= 1250)
+    return;
   const footerLinkEmail = document.querySelectorAll('.email');
   const footerLinkVogue = document.querySelectorAll('.vogue');
       
