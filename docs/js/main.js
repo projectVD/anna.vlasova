@@ -28,10 +28,10 @@ const app = {
 
     hideBurgerMenu();
     loadPageShow();
-    setTimeout(resizeImgHandlerOff, 2500);
-    setTimeout(activePage, 2500);
-    setTimeout(goTop, 2500);
-    setTimeout(loadPageHide, 5000);
+    setTimeout(resizeImgHandlerOff, 1500);
+    setTimeout(activePage, 1500);
+    setTimeout(goTop, 1500);
+    setTimeout(loadPageHide, 3000);
 
     function resizeImgHandlerOff() {
       if(window.innerWidth <= 850 || window.innerWidth > 1250) 
@@ -82,7 +82,7 @@ const app = {
       headerLink.forEach(link => {
         link.style.color = '#2B2B2B'
       });
-
+      headerItems[0].style.borderBottom = '1px solid transparent'
       headerItems[1].style.borderBottom = '1px solid #2B2B2B'
     } else {
       burgerBtn.forEach(btn => {
@@ -150,7 +150,7 @@ function footerRender() {
           <a class="footer-link" href="https://vk.com/id180984">Vk</a>
         </div>
         <div class="designer-name">
-          <a class="footer-link link-designer" href="https://www.behance.net/VTORIANYK"><span>Created with love</span> Torianyk</a>
+          <a class="footer-link link-designer" href="https://www.instagram.com/torianyk.v/"><span>Created with love</span> Torianyk</a>
         </div>
       </div>
     </footer>`;
@@ -189,11 +189,13 @@ pageLinks.forEach(link => {
 
 pageImg.forEach(img => {
   img.addEventListener('mouseover', () => {
-    mouseCursor.style.mixBlendMode = 'normal'
+    mouseCursor.style.mixBlendMode = 'normal';
+    mouseCursor.style.padding = '16px'
   });
 
   img.addEventListener('mouseleave', () => {
-    mouseCursor.style.mixBlendMode = 'difference'
+    mouseCursor.style.mixBlendMode = 'difference';
+    mouseCursor.style.padding = '8px'
   });
 })
 
