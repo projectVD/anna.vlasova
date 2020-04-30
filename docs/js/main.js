@@ -159,10 +159,13 @@ function footerRender() {
 
 
 // Cursor setting
+const beautyButton = document.querySelector('.beauty-button');
 
 let mouseCursor = document.querySelector('.cursor');
 let pageLinks = document.querySelectorAll('a');
 let pageImg = document.querySelectorAll('img');
+let portfolioImg = document.querySelectorAll('.portfolio__img img');
+let catalogBtn = document.querySelectorAll('.catalog-button');
 // let portfolioCard = document.querySelectorAll('.portfolio__items');
 
 window.addEventListener('mousemove', cursor);
@@ -177,6 +180,24 @@ function cursor(e) {
   mouseCursor.style.transform = `translate(${x - 8}px , ${y - 8}px)`;
 }
 
+beautyButton.addEventListener('mouseover', () => {
+  mouseCursor.style.padding = '16px'
+});
+
+beautyButton.addEventListener('mouseleave', () => {
+  mouseCursor.style.padding = '8px'
+});
+
+portfolioImg.forEach(img => {
+  img.addEventListener('mouseover', () => {
+    mouseCursor.style.padding = '16px'
+  });
+
+  img.addEventListener('mouseleave', () => {
+    mouseCursor.style.padding = '8px'
+  });
+})
+
 pageLinks.forEach(link => {
   link.addEventListener('mouseover', () => {
     mouseCursor.style.padding = '16px'
@@ -190,15 +211,22 @@ pageLinks.forEach(link => {
 pageImg.forEach(img => {
   img.addEventListener('mouseover', () => {
     mouseCursor.style.mixBlendMode = 'normal';
-    mouseCursor.style.padding = '16px'
   });
 
   img.addEventListener('mouseleave', () => {
     mouseCursor.style.mixBlendMode = 'difference';
-    mouseCursor.style.padding = '8px'
   });
 })
 
+catalogBtn.forEach(btn => {
+  btn.addEventListener('mouseover', () => {
+    mouseCursor.style.padding = '16px';
+  });
+
+  btn.addEventListener('mouseleave', () => {
+    mouseCursor.style.padding = '8px';
+  });
+})
 
 
 // smoot scroll
@@ -241,15 +269,53 @@ Scrollbar.init(document.querySelector('.scroll-bueauty'), {
 // Portfolio card animations
 const portfolioItems = document.querySelectorAll('.portfolio__items');
 
+beautyButton.addEventListener('mousemove', function() {
+  const img = this.querySelector('img');
+
+  img.style.transform = 'scale(1.05)';
+  img.style.opacity = '1';
+});
+
+beautyButton.addEventListener('mouseleave', function() {
+  const img = this.querySelector('img');
+
+  img.style.transform = 'scale(1)';
+  img.style.opacity = '0.5';
+});
+
+catalogBtn.forEach(btn => {
+  btn.addEventListener('mousemove', function() {
+    const img = this.querySelector('img');
+
+    img.style.transform = 'scale(1.05)';
+    img.style.opacity = '1';
+  });
+
+  btn.addEventListener('mouseleave', function() {
+    const img = this.querySelector('img');
+
+    img.style.transform = 'scale(1)';
+    img.style.opacity = '0.5';
+  });
+});
+
 portfolioItems.forEach(items => {
   items.addEventListener('mousemove', function() {
     const text = this.querySelector('.items-title');
+    const img = this.querySelector('img');
+
     text.style.transform = 'translateY(20px)';
+    img.style.transform = 'scale(1.05)';
+    img.style.opacity = '1';
   });
 
   items.addEventListener('mouseleave', function() {
     const text = this.querySelector('.items-title');
+    const img = this.querySelector('img');
+
     text.style.transform = 'translateY(0)';
+    img.style.transform = 'scale(1)';
+    img.style.opacity = '0.5';
   });
 })
 
@@ -263,9 +329,21 @@ function transformImagesHeandler() {
   if (window.innerWidth <= 1024)
     return;
   photoGroup.forEach(card => {
-  card.addEventListener('mousemove', sartRotateCard);
-  card.addEventListener('mouseout', stopRotateCard);
+  card.addEventListener('mousemove', scaleCardOn);
+  card.addEventListener('mouseout', scaleCardOf);
   });
+}
+
+function scaleCardOn() {
+  const cardItem = this.querySelector('img');
+  cardItem.style.transition = 'transform 0.8s'
+  cardItem.style.transform = 'scale(0.98)';
+}
+
+function scaleCardOf() {
+  const cardItem = this.querySelector('img');
+  cardItem.style.transition = 'transform 0.8s'
+  cardItem.style.transform = 'scale(1)';
 }
 
 function sartRotateCard() {
