@@ -1379,8 +1379,9 @@
     }
     &:nth-child(3) {
       .items-title {
-        width: 440px;
-        right: 20px;
+        width: auto;
+        right: auto;
+        left: -10%;
       }
     }
     &:nth-child(4) {
@@ -1514,8 +1515,9 @@
     }
     &:nth-child(3) {
       .items-title {
-        width: 273px;
-        right: 70px;
+        width: auto;
+        right: auto;
+        left: -10%;
       }
     }
     &:nth-child(4) {
@@ -2595,7 +2597,8 @@
     }
     &:nth-child(3) {
       .items-title {
-        right: 4%;
+        right: auto;
+        left: -10%;
       }
     }
     &:nth-child(5) {
